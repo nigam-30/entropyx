@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+frontend/dist/
+
+# C++ binaries & build artifacts
+backend/bin/
+backend/build/
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.bin
+backend/data/history_hashes.bin
+
+# Environment & local files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosv
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
