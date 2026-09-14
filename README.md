@@ -6,8 +6,11 @@ A production-grade security suite featuring a **Multi-threaded C++14 Cryptograph
 [![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![C++14](https://img.shields.io/badge/C++-14-00599C?logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
-[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com/)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://entropyx-password-suite.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-success?logo=vercel)](https://entropyx-password-suite.vercel.app/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+> 🔗 **Live Web Application:** [https://entropyx-password-suite.vercel.app](https://entropyx-password-suite.vercel.app/)
 
 ---
 
