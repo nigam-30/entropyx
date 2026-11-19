@@ -65,6 +65,25 @@ A production-grade security suite featuring a **Multi-threaded C++14 Cryptograph
 
 ---
 
+## 📚 Project Documentation & Specifications
+
+EntropyX adheres to comprehensive architectural, security, and operational specifications located in the [`docs/`](docs/) directory:
+
+| Document | Description |
+| :--- | :--- |
+| 📋 [**PRD.md**](docs/PRD.md) | **Product Requirements**: Vision, target personas, cryptographic feature specs, and success KPIs. |
+| 🎨 [**DESIGN_SYSTEM.md**](docs/DESIGN_SYSTEM.md) | **Design System**: Typography, color palette, Tailwind tokens, component ergonomics, and accessibility. |
+| 🏛️ [**ARCHITECTURE.md**](docs/ARCHITECTURE.md) | **System Architecture**: Dual-engine C++ / WebCrypto design, data flows, project structure, and failure scenarios. |
+| 🗄️ [**DATABASE.md**](docs/DATABASE.md) | **Data & Storage**: `cryptokey_vault_v1` envelope schema, in-memory models, and Bloom filter index. |
+| 🔐 [**SECURITY.md**](docs/SECURITY.md) | **Security Guidelines**: Zero-Knowledge invariants, PBKDF2/AES-GCM rules, auto-lock RAM wiping, and threat checklist. |
+| 💻 [**CODE_STYLE.md**](docs/CODE_STYLE.md) | **Code Style & Conventions**: Clean React 19 / Modern C++ conventions, naming, error handling, and Do's & Don'ts. |
+| 🧪 [**TESTING.md**](docs/TESTING.md) | **Testing Strategy**: Rejection sampling verification, PBKDF2 roundtrips, test commands, and Definition of Done. |
+| 🤖 [**AGENTS.md**](docs/AGENTS.md) | **AI Coding Agent Instructions**: Operational guidelines, sources of truth, validation protocols, and conflict handling. |
+| 🗺️ [**UX_FLOWS.md**](docs/UX_FLOWS.md) | **UX Flows**: Step-by-step user journeys (generation, clipboard copy, first-time vault setup, memory auto-lock). |
+| 🔌 [**API.md**](docs/API.md) | **API Contracts**: Formal REST endpoint specifications, JSON request/response schemas, and fallback behaviors. |
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Local 1-Click Launch (Windows)
@@ -114,12 +133,17 @@ The repository is pre-configured with `vercel.json` for 1-click cloud deployment
 
 ## 🔌 C++ Backend REST Endpoints
 
+*(Full schemas, request/response payloads, and fallback specifications are documented in [docs/API.md](docs/API.md))*
+
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
 | `GET` | `/api/health` | Service status, Bloom filter statistics, and unique passwords counter. |
 | `POST` | `/api/generate` | Generates a guaranteed-unique password with Shannon entropy & crack metrics. |
-| `POST` | `/api/analyze` | Evaluates arbitrary passwords for sequential patterns and keyboard walks. |
-| `POST` | `/api/benchmark` | Benchmarks multi-threaded generation throughput on the host CPU (>400k ops/sec). |
+| `POST` | `/api/generate-passphrase` | Generates a Diceware-style passphrase with entropy calculations. |
+| `POST` | `/api/analyze` | Evaluates arbitrary passwords for sequential patterns, crack time, and NIST standards. |
+| `POST` | `/api/benchmark` | Benchmarks multi-threaded generation throughput on the host CPU (>1,000,000 ops/sec). |
+| `POST` | `/api/check-breach` | Audits passwords against known breaches using Zero-Knowledge k-Anonymity prefixes. |
+| `GET` | `/api/vlsi-model` | Cycle-accurate simulation trace of 32-bit Galois LFSR Hardware RTL model. |
 
 ---
 
