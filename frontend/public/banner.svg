@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="40%" stop-color="#0a0f24" />
+      <stop offset="80%" stop-color="#080c1d" />
+      <stop offset="100%" stop-color="#03050b" />
+    </linearGradient>
+
+    <radialGradient id="glow-cyan" cx="20%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-indigo" cx="75%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.30" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-emerald" cx="88%" cy="20%" r="35%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Shield Gradients -->
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="shield-inner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#f8fafc" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4" />
+      <circle cx="40" cy="0" r="1" fill="#38bdf8" fill-opacity="0.25" />
+    </pattern>
+
+    <!-- Filter for Glow -->
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="shield-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bg-grad)" />
+
+  <!-- Ambient Glow Orbs -->
+  <rect width="1200" height="420" fill="url(#glow-cyan)" />
+  <rect width="1200" height="420" fill="url(#glow-indigo)" />
+  <rect width="1200" height="420" fill="url(#glow-emerald)" />
+
+  <!-- Cyber Grid Overlay -->
+  <rect width="1200" height="420" fill="url(#cyber-grid)" />
+
+  <!-- Diagonal Cyber Accent Lines -->
+  <g opacity="0.18">
+    <line x1="0" y1="80" x2="1200" y2="240" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="8 12" />
+    <line x1="0" y1="200" x2="1200" y2="360" stroke="#6366f1" stroke-width="1" stroke-dasharray="16 8" />
+    <line x1="0" y1="320" x2="1200" y2="480" stroke="#10b981" stroke-width="0.8" />
+  </g>
+
+  <!-- Left: Shield & Cryptographic Core Visual -->
+  <g transform="translate(130, 210)">
+    <!-- Outer Glow Ring -->
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6 8" />
+    <circle cx="0" cy="0" r="125" fill="none" stroke="#6366f1" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="2 14" />
+    
+    <!-- Rotating Node Markers -->
+    <circle cx="105" cy="0" r="3" fill="#38bdf8" filter="url(#soft-glow)" />
+    <circle cx="-105" cy="0" r="3" fill="#818cf8" filter="url(#soft-glow)" />
+    <circle cx="0" cy="105" r="3" fill="#10b981" filter="url(#soft-glow)" />
+    <circle cx="0" cy="-105" r="3" fill="#38bdf8" filter="url(#soft-glow)" />
+
+    <!-- Shield Outer Aura -->
+    <path d="M 0 -80 L 64 -46 C 64 36 34 84 0 102 C -34 84 -64 36 -64 -46 Z" 
+          fill="none" stroke="url(#shield-grad)" stroke-width="5" filter="url(#shield-glow)" opacity="0.8" />
+
+    <!-- Shield Base -->
+    <path d="M 0 -76 L 60 -44 C 60 34 32 78 0 95 C -32 78 -60 34 -60 -44 Z" 
+          fill="url(#shield-inner)" stroke="url(#shield-grad)" stroke-width="2.5" />
+
+    <!-- Shield Internal Cyber Circuits -->
+    <path d="M 0 -58 L 0 -18" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+    <circle cx="0" cy="-18" r="3" fill="#38bdf8" />
+    
+    <path d="M -30 -30 L -15 -18 L -15 15 L 0 28" fill="none" stroke="#818cf8" stroke-width="1.8" stroke-linejoin="round" />
+    <circle cx="-30" cy="-30" r="2.5" fill="#818cf8" />
+
+    <path d="M 30 -30 L 15 -18 L 15 15 L 0 28" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round" />
+    <circle cx="30" cy="-30" r="2.5" fill="#38bdf8" />
+
+    <!-- Central Keyhole / Vault Glyph -->
+    <g transform="translate(0, 10)">
+      <circle cx="0" cy="-7" r="11" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+      <path d="M -5 -2 L -7 16 L 7 16 L 5 -2 Z" fill="#38bdf8" />
+      <circle cx="0" cy="-7" r="4.5" fill="#0f172a" />
+      <!-- Glowing Lock Center -->
+      <circle cx="0" cy="-7" r="2" fill="#38bdf8" filter="url(#soft-glow)" />
+    </g>
+
+    <!-- Floating Hex & Binary Entropy Particles -->
+    <text x="-85" y="-65" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#38bdf8" opacity="0.6">0x7F</text>
+    <text x="68" y="-72" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#a855f7" opacity="0.65">AES-256</text>
+    <text x="-95" y="55" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#10b981" opacity="0.6">E=L·log₂(N)</text>
+    <text x="65" y="68" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#38bdf8" opacity="0.6">CSPRNG</text>
+  </g>
+
+  <!-- Right: Branding & Feature Suite -->
+  <g transform="translate(310, 0)">
+    <!-- Security Badge Pill -->
+    <g transform="translate(0, 78)">
+      <rect width="265" height="28" rx="14" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <circle cx="15" cy="14" r="4" fill="#10b981" filter="url(#soft-glow)" />
+      <text x="28" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="0.5">
+        ZERO-KNOWLEDGE ARCHITECTURE
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="152" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="54" font-weight="800" fill="url(#title-grad)" letter-spacing="-0.5">
+      EntropyX
+    </text>
+
+    <!-- Subtitle -->
+    <text x="2" y="188" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="500" fill="#cbd5e1" letter-spacing="0.2">
+      High-Assurance Cryptographic Suite &amp; Zero-Knowledge Client Vault
+    </text>
+
+    <!-- Description -->
+    <text x="2" y="214" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="400" fill="#94a3b8">
+      Dual-engine native C++14 CSPRNG daemon &amp; W3C WebCrypto with zero modulo bias.
+    </text>
+
+    <!-- Tech Badges Bar -->
+    <g transform="translate(0, 246)">
+      <!-- Badge 1: C++14 Engine -->
+      <g transform="translate(0, 0)">
+        <rect width="138" height="32" rx="8" fill="#111827" stroke="#374151" stroke-width="1" />
+        <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="600" fill="#38bdf8">⚡ C++14 Engine</text>
+      </g>
+
+      <!-- Badge 2: WebCrypto Cloud -->
+      <g transform="translate(148, 0)">
+        <rect width="144" height="32" rx="8" fill="#111827" stroke="#374151" stroke-width="1" />
+        <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="600" fill="#a78bfa">🌐 Web Crypto API</text>
+      </g>
+
+      <!-- Badge 3: AES-256-GCM -->
+      <g transform="translate(302, 0)">
+        <rect width="140" height="32" rx="8" fill="#111827" stroke="#374151" stroke-width="1" />
+        <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="600" fill="#34d399">🔐 AES-256-GCM</text>
+      </g>
+
+      <!-- Badge 4: PBKDF2 100k -->
+      <g transform="translate(452, 0)">
+        <rect width="138" height="32" rx="8" fill="#111827" stroke="#374151" stroke-width="1" />
+        <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="600" fill="#fbbf24">🛡️ PBKDF2 100k</text>
+      </g>
+
+      <!-- Badge 5: Zero Modulo Bias -->
+      <g transform="translate(600, 0)">
+        <rect width="168" height="32" rx="8" fill="#111827" stroke="#374151" stroke-width="1" />
+        <text x="12" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="600" fill="#f472b6">🎯 Zero Modulo Bias</text>
+      </g>
+    </g>
+
+    <!-- Metrics Status Line -->
+    <g transform="translate(0, 310)">
+      <!-- Panel 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="240" height="48" rx="10" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+        <text x="14" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#64748b" text-transform="uppercase">Entropy Calculation</text>
+        <text x="14" y="38" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#38bdf8">128+ Bits Shannon Max</text>
+      </g>
+
+      <!-- Panel 2 -->
+      <g transform="translate(254, 0)">
+        <rect width="250" height="48" rx="10" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+        <text x="14" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#64748b" text-transform="uppercase">Deduplication Core</text>
+        <text x="14" y="38" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#10b981">2M-Bit Bloom Filter (k=7)</text>
+      </g>
+
+      <!-- Panel 3 -->
+      <g transform="translate(518, 0)">
+        <rect width="250" height="48" rx="10" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+        <text x="14" y="20" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#64748b" text-transform="uppercase">RAM Auto-Lock</text>
+        <text x="14" y="38" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#fb7185">Instant Volatile Purge</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Gradient Line -->
+  <rect x="0" y="416" width="1200" height="4" fill="url(#shield-grad)" />
+</svg>

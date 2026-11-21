@@ -1,0 +1,300 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="arch-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="50%" stop-color="#0a0f24" />
+      <stop offset="100%" stop-color="#03050b" />
+    </linearGradient>
+
+    <!-- Node Card Gradients -->
+    <linearGradient id="card-react" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <linearGradient id="card-cpp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1b36" />
+      <stop offset="100%" stop-color="#061021" />
+    </linearGradient>
+
+    <linearGradient id="card-webcrypto" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161233" />
+      <stop offset="100%" stop-color="#0b0a1c" />
+    </linearGradient>
+
+    <linearGradient id="card-vault" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062419" />
+      <stop offset="100%" stop-color="#03140d" />
+    </linearGradient>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7" />
+    </marker>
+
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="arch-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.3" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="860" fill="url(#arch-bg)" />
+  <rect width="1200" height="860" fill="url(#arch-grid)" />
+
+  <!-- HEADER / TITLE -->
+  <g transform="translate(60, 48)">
+    <rect width="200" height="26" rx="13" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <circle cx="14" cy="13" r="4" fill="#38bdf8" filter="url(#glow-effect)" />
+    <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#94a3b8">
+      SYSTEM ARCHITECTURE
+    </text>
+
+    <text x="0" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#f8fafc">
+      EntropyX Dual-Engine &amp; Zero-Knowledge Topology
+    </text>
+    <text x="0" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8">
+      Hybrid C++14 Microservice daemon with automatic W3C WebCrypto fallback &amp; volatile client vault.
+    </text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 1: CLIENT PRESENTATION & APPLICATION (REACT 19 + TAILWIND V4)       -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 160)">
+    <!-- Container Box -->
+    <rect width="1080" height="210" rx="16" fill="url(#card-react)" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Header Pill -->
+    <rect x="20" y="-14" width="370" height="28" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+    <text x="35" y="5" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">
+      🖥️ FRONTEND CLIENT (React 19 + Tailwind v4 + Vite)
+    </text>
+
+    <!-- Sub-card 1: Generator Workspace -->
+    <g transform="translate(24, 28)">
+      <rect width="324" height="155" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">
+        ⚡ Generator Workspace
+      </text>
+      <text x="16" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • Length (4-128) &amp; Charset Checkboxes
+      </text>
+      <text x="16" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • Dynamic Multi-Color Syntax Highlighting
+      </text>
+      <text x="16" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • 1-Click Clipboard Copy &amp; Auto Re-Roll
+      </text>
+      <text x="16" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • 1-Click "Save to Vault" Direct Flow
+      </text>
+      
+      <!-- Tech Badge -->
+      <rect x="16" y="122" width="128" height="20" rx="4" fill="#1e293b" />
+      <text x="24" y="136" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#38bdf8">
+        Rejection Sampling
+      </text>
+    </g>
+
+    <!-- Sub-card 2: Shannon Entropy & Security Auditor -->
+    <g transform="translate(372, 28)">
+      <rect width="336" height="155" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">
+        📊 Real-Time Cryptographic Auditor
+      </text>
+      <text x="16" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • Shannon Entropy: <tspan fill="#38bdf8" font-family="'JetBrains Mono', monospace">E = L × log₂(N)</tspan>
+      </text>
+      <text x="16" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • NIST SP 800-63B Multi-Tier Strength Meter
+      </text>
+      <text x="16" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • Offline Crack-Time Model (10¹⁰ guesses/s)
+      </text>
+      <text x="16" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • Character Pool Density &amp; Modulo Verification
+      </text>
+
+      <rect x="16" y="122" width="144" height="20" rx="4" fill="#1e293b" />
+      <text x="24" y="136" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#10b981">
+        NIST 800-63B Auditor
+      </text>
+    </g>
+
+    <!-- Sub-card 3: Zero-Knowledge Client Vault -->
+    <g transform="translate(732, 28)">
+      <rect width="324" height="155" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">
+        🔐 Zero-Knowledge Vault
+      </text>
+      <text x="16" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • PBKDF2 (100k rounds) HMAC-SHA256
+      </text>
+      <text x="16" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • Authenticated AES-256-GCM Encryption
+      </text>
+      <text x="16" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">
+        • Volatile In-Memory Security Lifecycle
+      </text>
+      <text x="16" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444" font-weight="600">
+        • Instant RAM Wipe on Tab Auto-Lock
+      </text>
+
+      <rect x="16" y="122" width="138" height="20" rx="4" fill="#1e293b" />
+      <text x="24" y="136" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#f43f5e">
+        Volatile RAM Scope
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 2: HYBRID NETWORK DISPATCH / AUTO-FAILOVER ROUTER                   -->
+  <!-- ========================================================================= -->
+  <g transform="translate(360, 395)">
+    <!-- Router Box -->
+    <rect width="480" height="52" rx="12" fill="#0f172a" stroke="#6366f1" stroke-width="1.8" />
+    <circle cx="28" cy="26" r="6" fill="#6366f1" filter="url(#glow-effect)" />
+    <text x="44" y="23" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#f8fafc">
+      HYBRID DISPATCHER (api.js)
+    </text>
+    <text x="44" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+      Auto-Detects C++ Daemon (1.5s timeout) → Seamless Failover to WebCrypto
+    </text>
+  </g>
+
+  <!-- Connector Lines from Layer 1 to Router -->
+  <path d="M 220 370 L 220 421 L 360 421" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+  <path d="M 600 370 L 600 395" fill="none" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow-purple)" />
+  <path d="M 894 370 L 894 580" fill="none" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrow-emerald)" stroke-dasharray="6 4" />
+
+  <!-- Outgoing Fork Arrows from Dispatcher -->
+  <!-- Left Fork: Local C++ Server -->
+  <path d="M 440 447 L 440 480 L 280 480 L 280 505" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow-cyan)" />
+  <text x="290" y="492" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#38bdf8" font-weight="600">Localhost:8080 Active</text>
+
+  <!-- Right Fork: Cloud WebCrypto Fallback -->
+  <path d="M 760 447 L 760 480 L 920 480 L 920 505" fill="none" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow-purple)" />
+  <text x="780" y="492" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#a855f7" font-weight="600">Cloud / Offline / Timeout</text>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 3A: NATIVE C++14 CRYPTOGRAPHIC ENGINE                               -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 515)">
+    <rect width="490" height="225" rx="16" fill="url(#card-cpp)" stroke="#0284c7" stroke-width="1.5" />
+    
+    <rect x="20" y="-14" width="310" height="28" rx="8" fill="#0369a1" stroke="#38bdf8" stroke-width="1" />
+    <text x="32" y="5" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#ffffff">
+      ⚡ C++14 NATIVE REST DAEMON (:8080)
+    </text>
+
+    <!-- Details -->
+    <g transform="translate(24, 26)">
+      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#38bdf8">
+        OS-Level Hardware Entropy Source
+      </text>
+      <text x="0" y="38" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Windows: <tspan fill="#f1f5f9" font-family="'JetBrains Mono', monospace">CryptGenRandom</tspan> (CryptoAPI) / POSIX <tspan fill="#f1f5f9" font-family="'JetBrains Mono', monospace">/dev/urandom</tspan>
+      </text>
+      <text x="0" y="56" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Unbiased Rejection Sampling (Zero Modulo Bias Guarantee)
+      </text>
+      <text x="0" y="74" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Asynchronous Multi-threaded Worker Pool (>1,000,000 ops/s)
+      </text>
+
+      <line x1="0" y1="88" x2="442" y2="88" stroke="#1e293b" stroke-width="1" />
+
+      <text x="0" y="108" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#10b981">
+        Zero-Collision Deduplication Engine
+      </text>
+      <text x="0" y="126" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • 2,000,000-Bit Bloom Filter (<tspan fill="#f1f5f9" font-family="'JetBrains Mono', monospace">k=7</tspan> optimal independent hash functions)
+      </text>
+      <text x="0" y="144" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Append-only binary hash log: <tspan fill="#38bdf8" font-family="'JetBrains Mono', monospace">data/history_hashes.bin</tspan>
+      </text>
+      <text x="0" y="162" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • 32-Bit Galois LFSR Simulation &amp; k-Anonymity Breach Auditing
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 3B: CLOUD / STANDALONE WEB CRYPTO API                               -->
+  <!-- ========================================================================= -->
+  <g transform="translate(650, 515)">
+    <rect width="490" height="225" rx="16" fill="url(#card-webcrypto)" stroke="#7c3aed" stroke-width="1.5" />
+    
+    <rect x="20" y="-14" width="310" height="28" rx="8" fill="#5b21b6" stroke="#a78bfa" stroke-width="1" />
+    <text x="32" y="5" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#ffffff">
+      🌐 W3C WEB CRYPTO CLOUD ENGINE
+    </text>
+
+    <!-- Details -->
+    <g transform="translate(24, 26)">
+      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#c084fc">
+        Client-Side Browser Cryptographic Provider
+      </text>
+      <text x="0" y="38" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • <tspan fill="#f1f5f9" font-family="'JetBrains Mono', monospace">window.crypto.getRandomValues()</tspan> hardware entropy
+      </text>
+      <text x="0" y="56" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Client-Side Rejection Sampling + Fisher-Yates Uniform Shuffle
+      </text>
+      <text x="0" y="74" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Zero-Server, 100% Serverless Execution (Vercel Ready)
+      </text>
+
+      <line x1="0" y1="88" x2="442" y2="88" stroke="#1e293b" stroke-width="1" />
+
+      <text x="0" y="108" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#34d399">
+        Encrypted Envelope Persistence (cryptokey_vault_v1)
+      </text>
+      <text x="0" y="126" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Key Derivation: <tspan fill="#f1f5f9" font-family="'JetBrains Mono', monospace">PBKDF2-HMAC-SHA256 (100k rounds, 128-bit salt)</tspan>
+      </text>
+      <text x="0" y="144" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Storage: Browser <tspan fill="#f1f5f9" font-family="'JetBrains Mono', monospace">localStorage</tspan> (Authenticated Ciphertext Only)
+      </text>
+      <text x="0" y="162" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
+        • Zero-Knowledge: Plaintext and master password never hit storage
+      </text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- BOTTOM LAYER: ZERO-KNOWLEDGE BOUNDARY BANNER                              -->
+  <!-- ========================================================================= -->
+  <g transform="translate(60, 770)">
+    <rect width="1080" height="54" rx="10" fill="#022c22" stroke="#059669" stroke-width="1.2" />
+    <circle cx="30" cy="27" r="7" fill="#10b981" filter="url(#glow-effect)" />
+    <text x="48" y="24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#6ee7b7">
+      🛡️ ZERO-KNOWLEDGE SECURITY INVARIANT
+    </text>
+    <text x="48" y="42" font-family="system-ui, sans-serif" font-size="11.5" fill="#a7f3d0">
+      Master Passwords &amp; Decrypted Secrets never leave volatile RAM. Zero telemetry, zero external APIs, zero server-side credential transit.
+    </text>
+    
+    <!-- Badges Right -->
+    <rect x="940" y="14" width="120" height="26" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1" />
+    <text x="955" y="31" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#34d399">
+      E2E ENCRYPTED
+    </text>
+  </g>
+</svg>

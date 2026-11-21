@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="docs/assets/banner.svg" alt="EntropyX Banner" width="100%" />
+</div>
+
 # 🛡️ EntropyX — High-Performance Cryptographic Suite & Zero-Knowledge Vault
 
 A production-grade security suite featuring a **Multi-threaded C++14 Cryptographic Engine** and a **Modern React 19 & Tailwind CSS Frontend** with an integrated **Zero-Knowledge Client-Side Encrypted Password Vault**.
@@ -39,6 +43,57 @@ A production-grade security suite featuring a **Multi-threaded C++14 Cryptograph
 
 ## 🏛️ System Architecture
 
+<div align="center">
+  <img src="docs/assets/architecture.svg" alt="EntropyX System Architecture" width="100%" />
+</div>
+
+<details>
+<summary><b>🔍 View Mermaid Architecture Topology</b></summary>
+
+```mermaid
+flowchart TD
+    subgraph Client ["Client Browser (React 19 + Tailwind v4)"]
+        direction TB
+        subgraph UI ["User Interface Layer"]
+            GenUI["Generator Workspace<br/>• Length (4-128) & Charsets<br/>• Syntax Highlighting<br/>• 1-Click Clipboard Copy"]
+            AuditUI["Cryptographic Auditor<br/>• Shannon Entropy E = L × log₂(N)<br/>• NIST 800-63B Multi-tier<br/>• Offline Crack Time (10¹⁰ g/s)"]
+            VaultUI["Zero-Knowledge Vault<br/>• PBKDF2 (100k rounds)<br/>• AES-256-GCM Authenticated<br/>• Instant RAM Auto-Lock"]
+        end
+        Dispatcher["Hybrid Dispatcher (api.js)<br/>Auto-Detect C++ Daemon (1.5s timeout)"]
+    end
+
+    subgraph DualEngine ["Dual Execution Engine"]
+        subgraph NativeDaemon ["C++14 Native Daemon (:8080)"]
+            CSPRNG["CryptGenRandom / /dev/urandom<br/>Hardware Entropy Source"]
+            Sampling["Unbiased Rejection Sampling<br/>Zero Modulo Bias"]
+            Bloom["2M-Bit Bloom Filter (k=7)<br/>Zero-Collision Deduplication"]
+            HashLog[("data/history_hashes.bin<br/>Append-only SHA-256 Log")]
+        end
+
+        subgraph WebCryptoEngine ["Cloud / WebCrypto Engine"]
+            WebCSPRNG["window.crypto.getRandomValues()<br/>32-bit Hardware CSPRNG"]
+            ClientSampling["Client Rejection Sampling &<br/>Fisher-Yates Uniform Shuffle"]
+            Standalone["Zero-Server Standalone Execution"]
+        end
+    end
+
+    subgraph Storage ["Storage & Security Perimeter"]
+        LocalStorage[("Browser localStorage<br/>Envelope: cryptokey_vault_v1<br/>Salt + IV + Ciphertext + Tag")]
+    end
+
+    GenUI --> Dispatcher
+    AuditUI -.-> GenUI
+    Dispatcher -->|"Local :8080 Active"| NativeDaemon
+    Dispatcher -->|"Cloud / Timeout Fallback"| WebCryptoEngine
+    NativeDaemon --> HashLog
+    VaultUI -->|"Authenticated Ciphertext Only"| LocalStorage
+```
+
+</details>
+
+<details>
+<summary><b>📐 View ASCII Diagram</b></summary>
+
 ```
 +-------------------------------------------------------------------------------+
 |                       EntropyX Frontend (React 19 + Tailwind v4)             |
@@ -62,6 +117,8 @@ A production-grade security suite featuring a **Multi-threaded C++14 Cryptograph
 | - SHA-256 Persistent Hash Index       |             | - Standalone Zero-Server Mode |
 +---------------------------------------+             +-------------------------------+
 ```
+
+</details>
 
 ---
 
